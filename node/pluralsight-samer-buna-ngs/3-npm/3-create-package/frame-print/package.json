@@ -1,0 +1,11 @@
+{
+  "name": "saaheel-frame-print",
+  "version": "1.0.0",
+  "description": "This is my first package for printing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Saaheel Majethia",
+  "license": "ISC"
+}

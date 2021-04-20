@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript Example</title>
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <script>
+        // "use strict";
+        function breakLine(){
+            document.write('<br />');
+        }
+
+        function log(data){
+            console.log(data);
+        }
+
+        function print(data){
+            document.write(data);
+            document.write('<br />');
+        }
+
+        var x, y, z;          // How to declare variables
+        x = 5; y = 6;      // How to assign values
+        z = x + y;         // How to compute values
+
+        console.log(z);
+        document.write(z);breakLine();
+
+        var x = 5;
+        var x = 1;
+        var x = 2;
+        var x = 3;
+
+        document.write(x);breakLine();
+        
+        var x = 6;
+
+
+        document.write(p);
+        var p = 3;
+        breakLine();
+        /* Data type */
+        document.write("type of 2 = "+typeof(2));breakLine();
+        document.write("type of 3.14 = "+typeof(3.14));breakLine();
+        document.write("type of NaN = "+typeof(NaN));breakLine();
+        document.write("type of undefined = "+typeof(undefined));breakLine();
+        document.write("type of null = "+typeof(null));breakLine();
+        document.write("type of testapp = "+typeof("testapp"));breakLine();
+        document.write("type of {} = "+typeof({}));breakLine();
+
+        document.write("compare of null == undefined = "+( null == undefined));breakLine();
+        document.write("compare of null === undefined = "+( null === undefined));breakLine();
+
+        // var undefined = 5;
+        // document.write("type of undefined var = "+undefined);breakLine();
+
+        /* operators */
+
+        var a = 2;
+        var b = 3;
+
+        document.write("operators a = "+a);breakLine();
+        document.write("operators b = "+b);breakLine();
+        document.write("operators + = "+a+b);breakLine();
+        document.write("operators - = "+a-b);breakLine();
+        document.write("operators * = "+a*b);breakLine();
+        document.write("operators / = "+a/b);breakLine();
+        document.write("operators ** = "+a**b);breakLine();
+        document.write("operators == = "+(a==b));breakLine();
+        document.write("operators != = "+(a!=b));breakLine();
+        document.write("operators === = "+(a===b));breakLine();
+        document.write("operators !== = "+(a!==b));breakLine();
+        document.write("operators ++a = "+(++a));breakLine();
+        document.write("operators a++ = "+(a++));breakLine();
+        document.write("operators a++ = "+(a++));breakLine();
+        document.write("operators jsut = "+(a));breakLine();
+
+        console.log( a === b);
+
+        var p = {b:2};
+        var q = {b:2};
+        console.log(p);
+        console.log( p == q);
+
+        /* Bitwise operation */
+        var r;
+        var c;
+        c = 1 << 1;
+        console.log(a);
+        console.log(b);
+        console.log(c);
+
+        /* Normal function */
+        function compareTwoString(first,next){
+            console.log('Normal function');
+            var testC = 'Compare';
+            var $same = false;
+            var a = this.a;
+            var b = this.b;
+            console.log(a);
+            console.log(b);
+            if(a === b){
+                $same = true;
+            }
+            console.log("testC = "+testC);
+            return $same;
+        }
+        // console.log("testC = "+testC);   //gives error
+
+        /* Arrow function */
+        /*const compareTwoString = () => {
+            console.log('Arrow function');
+            $same = false;
+            var a = a;
+            var b = this.b;
+            console.log(a);
+            console.log(b);
+            if(a === b){
+                $same = true;
+            }
+            return $same;
+        }*/
+        document.write("comparing sahil & rahil = "+(compareTwoString('sahil','rahil')));breakLine();
+        document.write("comparing sahil & sahil = "+(compareTwoString('sahil','sahil')));breakLine();
+
+
+        var obj = {
+            myData: 'foo',
+            myFunct : function(){
+                console.log(this.myData);
+            }
+        }
+        obj.myFunct();
+
+        
+        var getData = () => {
+            var i;
+            console.log("aa = "+this.a);
+            var a = 9;
+            for(i =0; i<10; i++){
+                console.log("inner i = "+i);
+            }
+            console.log("last i = "+i);
+        }
+        getData();
+        // console.log("outside i ="+i);
+        
+
+        
+        var getDataLet = () => {
+            let j;
+            console.log("aa = "+this.a);
+            var a = 9;
+            for (j =0; j<10; j++){
+                console.log("inner j = "+j);
+            }
+            console.log("last j = "+j);
+        }
+        
+        getDataLet();
+        // console.log("outside j = "+j);
+        
+        var car = {type:"Fiat", model:"500", color:"white"};
+        log(car);
+
+        
+        var person = {
+            firstName: "John",
+            lastName : "Doe",
+            type : 'benz',
+            id       : 5566,
+            fullName : function() {
+                return this.firstName + " " + this.lastName + " " + this.type;
+            }
+        };
+
+        log(person.fullName());
+
+
+        /* call() & apply() */
+        //#They can both be used to call an object method with another object as argument.
+
+        var person1 = {
+            fullName: function() {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+        var person2 = {
+            firstName:"John",
+            lastName: "Doe",
+        }
+        log(person1.fullName.call(person2));  // Will return "John Doe"
+
+        /* let & const */
+        let aa = 2;
+        {
+            // var a = 'str';   //error
+            let a = 4;
+            {
+                let a = 6;
+                log("a3 = "+a);
+            }
+            log("a2 = "+a);
+        }
+        log("a1 = "+aa);
+
+        // You can create a const object:
+        const carConst = {type:"Fiat", model:"500", color:"white"};
+        log(carConst);
+
+        // You can change a property:
+        carConst.color = "red";
+
+        // You can add a property:
+        carConst.owner = "Johnson";
+        carConst.make = "Sahil";
+        carConst.type = "Benz";
+        log(carConst);
+
+        const carConst2 = {type:"Fiat", model:"500", color:"white"};
+        // carConst2 = {type:"Volvo", model:"EX60", color:"red"};    // ERROR
+        log(carConst2);
+
+        const carConst3 = {};
+        carConst3.type= 'Fiat benz';
+        log(carConst3);
+
+
+        /* hoisting */
+        carName = 'Fiat';
+        var carName;
+        let carType = 'Benz';
+        // let carType; //gives error if let used later, as its not hoisted
+
+
+        var x = "John";             
+        var y = new String("John");
+        print("check = "+(x == y)); // is true because data type check is not done
+        print("check = "+(x === y)); // is false because x is a string and y is an object.
+
+        var x = 5 + 7;       // x.valueOf() is 12,  typeof x is a number
+        print(" x1 = "+x);
+        var x = 5 + "7";     // x.valueOf() is 57,  typeof x is a string
+        print(" x2 = "+x);
+        var x = "5" + 7;     // x.valueOf() is 57,  typeof x is a string
+        print(" x3 = "+x);
+        var x = 5 - 7;       // x.valueOf() is -2,  typeof x is a number
+        print(" x4 = "+x);
+        var x = 5 - "7";     // x.valueOf() is -2,  typeof x is a number
+        print(" x5 = "+x);
+        var x = "5" - 7;     // x.valueOf() is -2,  typeof x is a number
+        print(" x6 = "+x);
+        var x = 5 - "x";     // x.valueOf() is NaN, typeof x is a number
+        print(" x7 = "+x);
+        var x = 5 + true;     
+        print(" x8 = "+x);
+        var x = 5 + false;     
+        print(" x9 = "+x);
+        var x = 5 + undefined;     
+        print(" x10 = "+x);
+
+
+        //map
+        var numbers1 = [45, 4, 9, 16, 25];
+        var numbers2 = numbers1.map(mapFunction);
+        var numbers3 = numbers1.map( (value,index) => value * index);
+
+        function mapFunction(value) {
+            return value * 2;
+        }
+        log(numbers2);  //[90, 8, 18, 32, 50]
+        log(numbers3);
+
+        //filters
+        var numbers = [45, 4, 9, 16, 25];
+        var over18 = numbers.filter(filterFunction);
+
+        function filterFunction(value) {
+            return value > 18;
+        }
+        log(over18);    [45,25]
+
+        // reduce
+        var numbersReduce = [45, 4, 9, 16, 25];
+        var sum = numbersReduce.reduce(reduceFunction);
+        var sumNew = numbersReduce.reduce((t,v) => {
+            log("t = "+t);
+            log("v = "+v);
+            return t+v;
+        });
+
+        function reduceFunction(total, value) {
+            return total + value;
+        }
+        log(sum);           //99
+        log(sumNew);        //99
+
+        //every
+        var numbers = [45, 4, 9, 16, 25];
+        var allOver18 = numbers.every(everyFunction);
+
+        function everyFunction(value) {
+            return value > 18   ;
+        }
+        log(allOver18);     //true or false
+
+        //some
+        var numbers = [45, 4, 9, 16, 25];
+        var allOver18 = numbers.some(someFunction);
+
+        function someFunction(value) {
+            return value > 18;
+        }
+        log(allOver18);
+
+        //find
+        var numbers = [41, 9, 16, 25, 29];
+        var first = numbers.find(findFunction);
+        function findFunction(value, index, array) {
+            return value > 18;
+        }
+        log(first);
+
+    </script>
+</head>
+
+<body>
+
+
+</body>
+</html>

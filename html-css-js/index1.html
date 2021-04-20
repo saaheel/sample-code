@@ -1,0 +1,38 @@
+
+<!Doctype>
+<html>
+    <script type="text/javascript">
+        
+        "use strict"; 
+        var v = "Hi!  I'm a strict mode script!";  // ERROR: Variable v is not declared
+
+        console.log("Testing"+Message);
+        var Message = "Big Message";
+        var message = "small message";
+        console.log(message+"=="+Message);
+
+        // Valid identifiers
+        var firstName = 'Saaheel';
+        var first_name = 'Sahil';
+        var _mobileNo = '9898989898';
+        var $mobileNo = '9898989898';
+
+        // Invalid identifiers
+        // var first Name = 'Saaheel';
+        // var 91Mobile = '9898989898'; 
+        // var #mobile = '9898989898';
+        // var mobile# = '9898989898';
+        
+        
+        
+
+    </script>
+    <body>
+        <div id="app"></div>
+        <p id="demo"></p>
+    </body>
+    <script type="text/javascript">
+        document.getElementById("demo").innerHTML = "Paragraph changed!";
+
+    </script>
+</html>
