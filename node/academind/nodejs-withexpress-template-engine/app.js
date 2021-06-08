@@ -6,7 +6,8 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-app.set('view engine', 'ejs');      
+// app.engine('hbs', expressHbs({layoutsDir: 'views/layouts/', defaultLayout: 'main-layout', extname: 'hbs'}))      //for handlebars
+app.set('view engine', 'ejs');      //pug / handlebars / ejs
 app.set('views', 'views');          // folder path
 
 const adminData = require('./routes/admin');
