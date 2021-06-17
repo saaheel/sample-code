@@ -21,8 +21,4 @@ app.use(shopRoutes);
 
 app.use(errorController.get404);
 
-<<<<<<< HEAD
 app.listen(3000);
-=======
-app.listen(3000)
->>>>>>> c6d433a3e1e63467b49dcbc3bdd2fd7004e04381
